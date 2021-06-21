@@ -5,19 +5,19 @@ This directory contains the IVOA Registry of Registries project.
 The `ivoa-rofr` consists of a number of modules.  These modules are deployed across an HTTP server, a Java Servlet container, and assorted scripts and applications used as CGIs.  The modules are listed below:
 
 ### Repository_Explorer-2.0-1.46
-C applications which provides OAI validation.
+C applications which provides OAI validation.  This application was developed externally; it is used to validate a registry's compliance to the base OAI-PMH protocol.  
 
 ### adql-1.0
-Java library which provides ADQL V1.0 parsing functionality.
+Java library which provides ADQL V1.0 parsing functionality.  ADLQ library is used by ivoaregistry to parse ADQL queries in compliance with the Registry 1.0 standard.    
 
 ### dalvalidate
-Java servlets and library that provides validation.
+Java servlets and library that provides validation.  In addition to providing validators for individual IVOA service types, it provides the base validation framework upon which the validator within ivoaharvest is based.  
 
 ### ivoaharvest
-Java servlets that provide validation.  Depends upon dalvalidate module.
+Java servlets that provide validation.  Depends upon dalvalidate module.  This package will harvest VOResource records according to the recipe layed out in the Registry standard, and it will validate the registry interfaces.  
 
 ### ivoaregistry
-Java library that provides searchable registry functionality.
+Java library that provides a client interface to searchable registries.  (This does not include the RegTAP interface.)
 
 ### junx-master
 Java library which provides XML validation.
